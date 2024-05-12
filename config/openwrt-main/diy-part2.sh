@@ -31,6 +31,10 @@ sed -i 's/root:::0:99999:7:::/root:$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF.::0:99999:7
 
 # Add third-party software packages (The entire repository)
 # git clone https://github.com/libremesh/lime-packages.git package/lime-packages
+git clone --depth=1 https://github.com/vernesong/OpenClash.git package
+git clone https://github.com/sirpdboy/luci-app-ddns-go.git package/ddns-go
+
+
 # Add third-party software packages (Specify the package)
 # svn co https://github.com/libremesh/lime-packages/trunk/packages/{shared-state-pirania,pirania-app,pirania} package/lime-packages/packages
 # Add to compile options (Add related dependencies according to the requirements of the third-party software package Makefile)
