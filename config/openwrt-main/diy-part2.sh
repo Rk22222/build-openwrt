@@ -31,8 +31,9 @@ sed -i 's/root:::0:99999:7:::/root:$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF.::0:99999:7
 
 # Add third-party software packages (The entire repository)
 # git clone https://github.com/libremesh/lime-packages.git package/lime-packages
-git clone --depth=1 https://github.com/vernesong/OpenClash.git package/openclash
 git clone https://github.com/sirpdboy/luci-app-ddns-go.git package/ddns-go
+git clone -b master --depth=1 --filter=blob:none --sparse https://github.com/vernesong/OpenClash.git package/luci-app-openclash
+git -C package/luci-app-openclash sparse-checkout set luci-app-openclash
 
 
 # Add third-party software packages (Specify the package)
